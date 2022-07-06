@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator_Dev_JoStar</title>
+    <link rel="stylesheet" , href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2>계산기 프로그램</h2>
+    </header>
+    <section>
+        <div>
+            <table border="1" height="400">
+                <tr>
+                    <!--사용자가 계산하고자 하는 값-->
+                    <td colspan="4"><input type="text" id="inputNum" disabled
+                            style="width: 100%; height: 100%; padding: 0; border-width: 0; font-size: 20px;"></td>
+                    <!--연산한 값을 기록하기 위한 공간-->
+                    <td style="background-color: pink;">연산기록</td>
+                </tr>
+                <tr>
+                    <!--결과값-->
+                    <td colspan="4"><input type="text" id="resultNum" disabled
+                            style="width: 100%; height: 100%; padding: 0; border-width: 0; font-size: 20px;"></td>
+                    <!--연산과정 및 결과 기록-->
+                    <td rowspan="6"><textarea name="ta" id="mathLog" disabled
+                            style="width: 100%; height: 100%; padding: 0; border-width: 0; font-size: 15px; resize: none;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="add('+')">
+                        +
+                        <!--덧셈-->
+                    </td>
+                    <td onclick="add('-')">
+                        -
+                        <!--뺄셈-->
+                    </td>
+                    <td onclick="add('*')">
+                        *
+                        <!--곱셈-->
+                    </td>
+                    <td onclick="add('/')">
+                        /
+                        <!--나눗셈-->
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="add('7')">7</td>
+                    <td onclick="add('8')">8</td>
+                    <td onclick="add('9')">9</td>
+                    <td onclick="backSpace()">C</td> <!--한글자씩 삭제-->
+                </tr>
+                <tr>
+                    <td onclick="add('4')">4</td>
+                    <td onclick="add('5')">5</td>
+                    <td onclick="add('6')">6</td>
+                    <td onclick="resetval()">A</td> <!--모든 글자 및 기록 삭제-->
+                </tr>
+                <tr>
+                    <td onclick="add('1')">1</td>
+                    <td onclick="add('2')">2</td>
+                    <td onclick="add('3')">3</td>
+                    <td rowspan="2" onclick="resultSet(), log()">=</td>
+                </tr>
+                <tr>
+                    <td colspan="2" onclick="add('0')">0</td>
+                    <td onclick="add('.')">.</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <script src="cal.js"></script>
+</body>
+
+</html>

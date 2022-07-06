@@ -1,0 +1,29 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+header {
+    padding: 8px;
+    background-color: brown;
+}
+
+body {
+    background-color: beige;
+}
+
+table {
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+    width: 30%;
+    border-collapse: collapse;
+}
+
